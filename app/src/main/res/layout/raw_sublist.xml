@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ArtistDetailActivity">
+
+
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="@dimen/margin_5"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:minLines="2"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvTrackName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvTrackName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:drawableStart="@drawable/ic_track_name"
+        android:drawablePadding="@dimen/margin_5"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistName"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_track_name"
+        android:drawablePadding="@dimen/margin_5"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:maxLength="25"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistName"
+        tools:layout_editor_absoluteX="4dp"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvCategoryCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:fontFamily="sans-serif"
+
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/tvArtistName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvArtistName"
+        tools:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:src="@drawable/img_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDisplayName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplayName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
